@@ -4,7 +4,7 @@ import * as fetch from 'isomorphic-fetch'
 import * as R from 'ramda'
 
 const defaultState = {
-  links: [],
+  links: null,
   layout: []
 } as LinkState
 

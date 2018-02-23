@@ -20,4 +20,7 @@ declare module '*.pcss' {
   const resource: string
   export default resource
 }
-
+declare module '*.json' {
+  const resource: {version: string}
+  export = resource
+}

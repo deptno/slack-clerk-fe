@@ -1,6 +1,6 @@
 {
   "name": "slack-clerk-fe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
     "start:dev": "next",
     "build:dev": "next build",
     "build": "NODE_ENV=production next build",
-    "export": "next export",
+    "export": "next export && cp -r .next/static out/_next",
     "analyze": "NODE_ENV=production ANALYZE=true next build",
     "start": "next start",
     "test": "jest",
