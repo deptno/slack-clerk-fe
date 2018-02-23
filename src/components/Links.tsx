@@ -8,23 +8,38 @@ class LinksComponent extends React.Component<P, S> {
   render() {
     return (
       <Table>
-        <Table.Body>
-          {
-            this.props.links.map(link => (
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell>
+              링크
+            </Table.HeaderCell>
+            <Table.HeaderCell>
+              날짜
+            </Table.HeaderCell>
+            <Table.HeaderCell>
+              시간
+            </Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>{
+          this.props.links.map(link => {
+            const [date, time] = new Date(link.timestamp * 1000).toISOString().slice(0, -5).split('T')
+            return (
               <Table.Row key={link.url}>
                 <Table.Cell>
                   <Icon name='browser'/>
-                </Table.Cell>
-                <Table.Cell>
-                  {new Date(link.timestamp * 1000).toISOString().slice(0, -5)}
-                </Table.Cell>
-                <Table.Cell>
                   <a href={link.url} target="_blank">{link.url}</a>
                 </Table.Cell>
+                <Table.Cell>
+                  {date}
+                </Table.Cell>
+                <Table.Cell>
+                  {time}
+                </Table.Cell>
               </Table.Row>
-            ))
-          }
-        </Table.Body>
+            )
+          })
+        }</Table.Body>
       </Table>
     )
   }

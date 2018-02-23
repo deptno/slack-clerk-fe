@@ -1,12 +1,12 @@
 import * as React from 'react'
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, {Head, Main, NextScript} from 'next/document'
 import flush from 'styled-jsx/server'
 
 export default class extends Document {
-  static getInitialProps({ renderPage }) {
-    const { html, head, errorHtml, chunks } = renderPage()
+  static getInitialProps({renderPage}) {
+    const {html, head, errorHtml, chunks} = renderPage()
     const styles = flush()
-    return { html, head, errorHtml, chunks, styles }
+    return {html, head, errorHtml, chunks, styles}
   }
 
   render() {
@@ -16,8 +16,8 @@ export default class extends Document {
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"/>
       </Head>
       <body>
-      <Main />
-      <NextScript />
+      <Main/>
+      <NextScript/>
       </body>
       </html>
     )

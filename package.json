@@ -20,6 +20,8 @@
     "test:coverage": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "deploy": "aws s3 sync out s3://clerk.dev.googit.co --delete",
+    "invalidation": "aws cloudfront create-invalidation --distribution-id ED8D2KSVPFH99 --paths \"/*\"",
     "ts:check": "tsc --noEmit"
   },
   "dependencies": {
