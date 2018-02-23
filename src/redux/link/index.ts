@@ -91,7 +91,7 @@ export interface LinkState {
 interface Link {
   user: string
   url: string
-  teamId: string
+  team: string
   channel: string
   timestamp: number
 }
