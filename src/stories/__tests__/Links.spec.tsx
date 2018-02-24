@@ -7,9 +7,17 @@ import * as links from '../data/links.json'
 
 describe('Component', () => {
   describe('Links', () => {
-    it('로딩', function () {
-      const rendered = shallow(<LinksComponent getLinks={() => thunk('getLinks')} links={void(0)} />)
-      expect(rendered.html().includes('loader')).toBe(true)
+    describe('링크 도착 전', () => {
+      it('로딩', function () {
+        const rendered = shallow(<LinksComponent getLinks={() => thunk('getLinks')} links={void(0)} />)
+        expect(rendered.html().includes('loader')).toBe(true)
+      })
+    })
+    describe('데이터 없을 시', () => {
+      it('로딩 표시 하지 않음', function () {
+        const rendered = shallow(<LinksComponent getLinks={() => thunk('getLinks')} links={[]}/>)
+        expect(rendered.html().includes('loader')).toBe(false)
+      })
     })
     it('헤더', function () {
       const rendered = shallow(<LinksComponent getLinks={() => thunk('getLinks')} links={links} />)
