@@ -4,7 +4,7 @@ import {RootState} from '../redux'
 import {getLinks, LinkState} from '../redux/link'
 import {Icon, Loader, Table} from 'semantic-ui-react'
 
-class LinksComponent extends React.Component<P, S> {
+export class LinksComponent extends React.Component<P, S> {
   render() {
     return (
       <Table>

@@ -86,7 +86,7 @@ function layoutLinks(payload: LayoutLink[]): TypeAction<LayoutLink[]> {
 
 export interface LinkState {
   links: Link[]
-  layout: LayoutLink[]
+  // layout: LayoutLink[]
 }
 interface Link {
   user: string

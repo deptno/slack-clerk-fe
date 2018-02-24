@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {Icon, List} from 'semantic-ui-react'
-import {version} from '../../package.json'
+import * as pack from '../../package.json'
 
 export const Footer: React.SFC<{}> = props => {
   return (
@@ -13,8 +13,9 @@ export const Footer: React.SFC<{}> = props => {
         </List.Content>
         <List.Content>
           <a href={'https://gihtub.com/deptno/slack-clerk-fe'}>
-            <Icon name="github"/> frontend@{version}
+            <Icon name="github"/> frontend
           </a>
+          @{pack.version}
         </List.Content>
       </List>
     </footer>

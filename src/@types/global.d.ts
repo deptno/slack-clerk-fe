@@ -21,6 +21,6 @@ declare module '*.pcss' {
   export default resource
 }
 declare module '*.json' {
-  const resource: {version: string}
+  const resource: any
   export = resource
 }
