@@ -88,12 +88,21 @@ export interface LinkState {
   links: Link[]
   // layout: LayoutLink[]
 }
-interface Link {
+export interface Link {
   user: string
   url: string
   team: string
   channel: string
   timestamp: number
+  meta?: {
+    title: string
+    url: string
+    image: string
+    ampURL: string
+    siteName: string
+    language: string
+    description: string
+  }
 }
 interface LayoutLink {/*extends ReactGridLayout.Layout {*/
   raw: Link

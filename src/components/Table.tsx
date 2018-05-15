@@ -1,10 +1,8 @@
 import * as React from 'react'
-import {connect} from 'react-redux'
-import {RootState} from '../redux'
-import {getLinks, LinkState} from '../redux/link'
+import {Link} from '../redux/link'
 import {Icon, Loader, Table} from 'semantic-ui-react'
 
-export class LinksComponent extends React.Component<P, S> {
+export class TableComponent extends React.Component<P, S> {
   render() {
     return (
       <Table>
@@ -45,31 +43,9 @@ export class LinksComponent extends React.Component<P, S> {
       </Table>
     )
   }
-
-  componentDidMount() {
-    this.props.getLinks()
-  }
 }
-export const Links = connect<S, D, O>(
-  (state: RootState) => {
-    return state.link
-  },
-  {
-    getLinks
-  }
-)(LinksComponent)
-
-interface S extends LinkState {
-
+interface P {
+  links: Link[]
 }
-interface D {
-  getLinks: typeof getLinks
-}
-interface O {
-
-}
-type P = S & D & O
-interface S {
-
-}
+interface S {}
 
