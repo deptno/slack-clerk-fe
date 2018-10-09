@@ -48,7 +48,7 @@ export function getLinks(): Thunk {
   return async (dispatch, getState) => {
     dispatch(action(REQUEST))
     try {
-      const response = await fetch('https://api.dev.googit.co/clerk/links')
+      const response = await fetch('https://api.bglee.me/clerk/links')
       const payload = await response.json()
 
       dispatch(action(SUCCESS, payload))

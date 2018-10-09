@@ -17,7 +17,7 @@ jobs:
       - run: npm run build
       - run: npm run export
       - run: npm run deploy
-      - run: npm run invalidation
+      - run: npm run invalidate
       - save_cache:
           key: v1-npm-deps-{{ checksum "package.json" }}
           paths:
