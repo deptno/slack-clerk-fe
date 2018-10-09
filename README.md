@@ -3,7 +3,7 @@
 slack link recorder
 
 backend: :octocat: <https://github.com/deptno/slack-clerk>  
-demo: <https://clerk.dev.googit.co>
+demo: <https://clerk.bglee.me>
 
 ## related
 - https://github.com/deptno/slack-clerk
